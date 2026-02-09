@@ -23,11 +23,11 @@ struct ScoreBadge: View {
             }
         }
 
-        var minWidth: CGFloat {
+        var circleSize: CGFloat {
             switch self {
-            case .small: return 50
-            case .medium: return 70
-            case .large: return 90
+            case .small: return 44
+            case .medium: return 60
+            case .large: return 80
             }
         }
     }
@@ -46,11 +46,9 @@ struct ScoreBadge: View {
         Text("\(score)")
             .font(size.fontSize)
             .foregroundColor(.white)
-            .padding(.horizontal, size.padding)
-            .padding(.vertical, size.padding / 2)
-            .frame(minWidth: size.minWidth)
+            .frame(width: size.circleSize, height: size.circleSize)
             .background(scoreColor)
-            .cornerRadius(CornerRadius.small)
+            .clipShape(Circle())
     }
 }
 

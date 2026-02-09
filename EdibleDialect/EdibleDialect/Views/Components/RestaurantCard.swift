@@ -54,6 +54,32 @@ struct RestaurantCard: View {
                                 .frame(height: 22)
                         }
 
+                        if restaurant.menuURL != nil {
+                            Button(action: {
+                                if let url = URL(string: restaurant.menuURL!) {
+                                    UIApplication.shared.open(url)
+                                }
+                            }) {
+                                Image("MenuBadge")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 22)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+
+                        Button(action: {
+                            if let url = URL(string: "tel:\(restaurant.phoneNumber)") {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            Image("PhoneBadge")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 22)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+
                         Button(action: {
                             let address = restaurant.address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
                             if let googleMapsApp = URL(string: "comgooglemaps://?q=\(address)"),
