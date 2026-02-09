@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A950E2162F3588BF00C95C0D /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A950E2152F3588BF00C95C0D /* AIService.swift */; };
+		ED001001 /* EdibleDialectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000001 /* EdibleDialectApp.swift */; };
+		ED001002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000002 /* ContentView.swift */; };
+		ED001003 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000003 /* DesignSystem.swift */; };
+		ED001004 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000004 /* Restaurant.swift */; };
+		ED001005 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000005 /* MockDataService.swift */; };
+		ED001006 /* ScoreBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000006 /* ScoreBadge.swift */; };
+		ED001007 /* RestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000007 /* RestaurantCard.swift */; };
+		ED001008 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000008 /* InfoButton.swift */; };
+		ED001009 /* BoroughButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000009 /* BoroughButton.swift */; };
+		ED001010 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000010 /* SearchBar.swift */; };
+		ED001011 /* SourceScoreRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000011 /* SourceScoreRow.swift */; };
+		ED001012 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000012 /* HomeScreen.swift */; };
+		ED001013 /* RestaurantDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000013 /* RestaurantDetailScreen.swift */; };
+		ED001014 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000014 /* AboutScreen.swift */; };
+		ED001015 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED000015 /* Assets.xcassets */; };
+		ED001016 /* AppTabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000017 /* AppTabState.swift */; };
+		ED001017 /* TabIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000018 /* TabIcon.swift */; };
+		ED001018 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000019 /* MapScreen.swift */; };
+		ED001019 /* AccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000020 /* AccountScreen.swift */; };
+		ED001020 /* EdibleExperiencesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000021 /* EdibleExperiencesScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A950E2152F3588BF00C95C0D /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		ED000001 /* EdibleDialectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdibleDialectApp.swift; sourceTree = "<group>"; };
+		ED000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED000003 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		ED000004 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		ED000005 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		ED000006 /* ScoreBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBadge.swift; sourceTree = "<group>"; };
+		ED000007 /* RestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCard.swift; sourceTree = "<group>"; };
+		ED000008 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
+		ED000009 /* BoroughButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughButton.swift; sourceTree = "<group>"; };
+		ED000010 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		ED000011 /* SourceScoreRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceScoreRow.swift; sourceTree = "<group>"; };
+		ED000012 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		ED000013 /* RestaurantDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailScreen.swift; sourceTree = "<group>"; };
+		ED000014 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		ED000015 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED000016 /* EdibleDialect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EdibleDialect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED000017 /* AppTabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabState.swift; sourceTree = "<group>"; };
+		ED000018 /* TabIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIcon.swift; sourceTree = "<group>"; };
+		ED000019 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		ED000020 /* AccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountScreen.swift; sourceTree = "<group>"; };
+		ED000021 /* EdibleExperiencesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdibleExperiencesScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED002001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED003001 = {
+			isa = PBXGroup;
+			children = (
+				ED003002 /* EdibleDialect */,
+				ED003003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED003002 /* EdibleDialect */ = {
+			isa = PBXGroup;
+			children = (
+				ED003004 /* App */,
+				ED003005 /* Models */,
+				ED003006 /* Views */,
+				ED003007 /* Services */,
+				ED003008 /* Theme */,
+				ED003009 /* Resources */,
+			);
+			path = EdibleDialect;
+			sourceTree = "<group>";
+		};
+		ED003003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED000016 /* EdibleDialect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED003004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ED000001 /* EdibleDialectApp.swift */,
+				ED000002 /* ContentView.swift */,
+				ED000017 /* AppTabState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ED003005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED000004 /* Restaurant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED003006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED003010 /* Components */,
+				ED003011 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED003007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A950E2152F3588BF00C95C0D /* AIService.swift */,
+				ED000005 /* MockDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ED003008 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				ED000003 /* DesignSystem.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		ED003009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED000015 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED003010 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				ED000006 /* ScoreBadge.swift */,
+				ED000007 /* RestaurantCard.swift */,
+				ED000008 /* InfoButton.swift */,
+				ED000009 /* BoroughButton.swift */,
+				ED000010 /* SearchBar.swift */,
+				ED000011 /* SourceScoreRow.swift */,
+				ED000018 /* TabIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		ED003011 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ED000012 /* HomeScreen.swift */,
+				ED000013 /* RestaurantDetailScreen.swift */,
+				ED000014 /* AboutScreen.swift */,
+				ED000019 /* MapScreen.swift */,
+				ED000020 /* AccountScreen.swift */,
+				ED000021 /* EdibleExperiencesScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED004001 /* EdibleDialect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED005001 /* Build configuration list for PBXNativeTarget "EdibleDialect" */;
+			buildPhases = (
+				ED002002 /* Sources */,
+				ED002001 /* Frameworks */,
+				ED002003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EdibleDialect;
+			productName = EdibleDialect;
+			productReference = ED000016 /* EdibleDialect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED006001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					ED004001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = ED005002 /* Build configuration list for PBXProject "EdibleDialect" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED003001;
+			productRefGroup = ED003003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED004001 /* EdibleDialect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED002003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED001015 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED002002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED001001 /* EdibleDialectApp.swift in Sources */,
+				ED001002 /* ContentView.swift in Sources */,
+				ED001003 /* DesignSystem.swift in Sources */,
+				ED001004 /* Restaurant.swift in Sources */,
+				A950E2162F3588BF00C95C0D /* AIService.swift in Sources */,
+				ED001005 /* MockDataService.swift in Sources */,
+				ED001006 /* ScoreBadge.swift in Sources */,
+				ED001007 /* RestaurantCard.swift in Sources */,
+				ED001008 /* InfoButton.swift in Sources */,
+				ED001009 /* BoroughButton.swift in Sources */,
+				ED001010 /* SearchBar.swift in Sources */,
+				ED001011 /* SourceScoreRow.swift in Sources */,
+				ED001012 /* HomeScreen.swift in Sources */,
+				ED001013 /* RestaurantDetailScreen.swift in Sources */,
+				ED001014 /* AboutScreen.swift in Sources */,
+				ED001016 /* AppTabState.swift in Sources */,
+				ED001017 /* TabIcon.swift in Sources */,
+				ED001018 /* MapScreen.swift in Sources */,
+				ED001019 /* AccountScreen.swift in Sources */,
+				ED001020 /* EdibleExperiencesScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ED007001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EdibleDialect/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edibleDialect.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED007002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EdibleDialect/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edibleDialect.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED007003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED007004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED005001 /* Build configuration list for PBXNativeTarget "EdibleDialect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED007001 /* Debug */,
+				ED007002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED005002 /* Build configuration list for PBXProject "EdibleDialect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED007003 /* Debug */,
+				ED007004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED006001 /* Project object */;
+}

@@ -1,0 +1,13 @@
+<!-- Location icon (blue Google-style pin) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Location">
+  <path fill="#1A73E8" d="
+      M12 2
+      A7 7 0 0 0 5 9
+      C5 14.25 12 22 12 22
+      C12 22 19 14.25 19 9
+      A7 7 0 0 0 12 2
+      Z
+    "></path>
+
+  <circle cx="12" cy="9" r="3" fill="white"></circle>
+</svg>
