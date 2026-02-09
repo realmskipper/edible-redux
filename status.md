@@ -1,6 +1,6 @@
 # EdibleDialect iOS App - Status
 
-## Last Updated: Feb 6, 2026
+## Last Updated: Feb 8, 2026
 
 ### Overview
 iOS restaurant discovery app for NYC featuring aggregated review scores, custom badges, and restaurant details.
@@ -135,6 +135,36 @@ All info buttons use custom SVG badges (no SF Symbols):
 - `Views/Components/SearchBar.swift` — Added external focus trigger binding
 - `Models/Restaurant.swift` — Added `latitude`, `longitude`, `coordinate` computed property
 - `Services/MockDataService.swift` — Added real lat/lng coordinates to all restaurants
+
+### Feb 8 Session - Card Badges & Visual Polish
+
+**Tagline Fade Animation**
+- Tagline below "edible dialect" now fades out after 3 seconds (1.5s easeOut dissolve)
+- Tagline overlaps slightly with title (offset -6pt) for a tighter header look
+
+**SVG Badge Icons on Restaurant Cards**
+- Replaced `$$$$` price text with CostBadge/CostBadge2 SVG graphics inline on cards
+- Added HealthScoreA/HealthScoreB badge on cards (visual, not tappable)
+- Added tappable MenuBadge — opens restaurant menu URL in browser
+- Added tappable PhoneBadge — initiates phone call
+- Added tappable LocationBadge — opens Google Maps (falls back to Apple Maps)
+- All badges at 22pt height, pushed to right side of info row via Spacer
+- Text info row now shows: `Cuisine • Neighborhood` on the left, badges on the right
+
+**Circle Score Badges**
+- Edible Score badges changed from rounded rectangles to circles
+- Sizes: small (44pt), medium (60pt), large (80pt)
+- Same color-coded backgrounds (green 90+, light green 80s, amber 70s, red below)
+
+**Git Repository Initialized**
+- Local git repo created with `.gitignore` (excludes .DS_Store, xcuserdata, DerivedData, .claude/)
+- Initial commit: full app baseline
+- Second commit: tonight's card badges + circle scores + tagline fade
+
+**Modified Files**
+- `Views/Components/RestaurantCard.swift` — SVG badge row replacing price text
+- `Views/Components/ScoreBadge.swift` — Circle shape instead of rounded rectangle
+- `Views/Screens/HomeScreen.swift` — Tagline fade-out animation + overlap offset
 
 ---
 
