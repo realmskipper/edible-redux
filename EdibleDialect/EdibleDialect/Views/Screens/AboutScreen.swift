@@ -118,6 +118,7 @@ struct AboutScreen: View {
                         .font(.edibleCaption)
                         .foregroundColor(.edibleTextSecondary)
                 }
+
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

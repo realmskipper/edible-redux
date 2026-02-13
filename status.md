@@ -1,6 +1,6 @@
 # EdibleDialect iOS App - Status
 
-## Last Updated: Feb 8, 2026
+## Last Updated: Feb 9, 2026
 
 ### Overview
 iOS restaurant discovery app for NYC featuring aggregated review scores, custom badges, and restaurant details.
@@ -165,6 +165,28 @@ All info buttons use custom SVG badges (no SF Symbols):
 - `Views/Components/RestaurantCard.swift` — SVG badge row replacing price text
 - `Views/Components/ScoreBadge.swift` — Circle shape instead of rounded rectangle
 - `Views/Screens/HomeScreen.swift` — Tagline fade-out animation + overlap offset
+
+### Feb 9 Session - Scoring Method Screen & Bug Fixes
+
+**Scoring Method Screen**
+- New `ScoringMethodScreen.swift` — dedicated screen explaining how Edible Scores are calculated
+- Accessible from each restaurant detail page via "Scoring Method" link below the source score breakdown
+- Opens as a sheet with scoring details (5-Star sources, 10-Point sources, Professional Reviews, Final Score)
+
+**Restaurant Detail Cleanup**
+- Removed price range (`$$$`) from restaurant detail header — now shows only cuisine type and neighborhood
+
+**Card Tap Target Bug Fix**
+- Fixed bug where tapping near the bottom of a restaurant card would open the wrong (next) restaurant
+- Root cause: `.aspectRatio(contentMode: .fill)` on card images extended the hit-test area beyond the visible clipped bounds
+- Fix: Added `.contentShape(Rectangle())` to `RestaurantCard` to constrain tap targets to visible card area
+
+**New Files**
+- `Views/Screens/ScoringMethodScreen.swift` — Scoring method explanation screen
+
+**Modified Files**
+- `Views/Screens/RestaurantDetailScreen.swift` — Added scoring method sheet, removed price range from header
+- `Views/Components/RestaurantCard.swift` — Added `.contentShape(Rectangle())` for tap target fix
 
 ---
 

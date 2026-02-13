@@ -3,7 +3,7 @@ import Foundation
 class AIService {
     static let shared = AIService()
 
-    private let apiKey = "YOUR_API_KEY_HERE"
+    private let apiKey = Config.anthropicAPIKey
     private let apiURL = "https://api.anthropic.com/v1/messages"
 
     private init() {}

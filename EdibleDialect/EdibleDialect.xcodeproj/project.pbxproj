@@ -28,6 +28,9 @@
 		ED001018 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000019 /* MapScreen.swift */; };
 		ED001019 /* AccountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000020 /* AccountScreen.swift */; };
 		ED001020 /* EdibleExperiencesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000021 /* EdibleExperiencesScreen.swift */; };
+		ED001021 /* ScoringMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000022 /* ScoringMethodScreen.swift */; };
+		ED001022 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000023 /* Config.swift */; };
+		ED001023 /* Config.example.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000024 /* Config.example.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		ED000019 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		ED000020 /* AccountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountScreen.swift; sourceTree = "<group>"; };
 		ED000021 /* EdibleExperiencesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdibleExperiencesScreen.swift; sourceTree = "<group>"; };
+		ED000022 /* ScoringMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringMethodScreen.swift; sourceTree = "<group>"; };
+		ED000023 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ED000024 /* Config.example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.example.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 				ED003007 /* Services */,
 				ED003008 /* Theme */,
 				ED003009 /* Resources */,
+				ED000023 /* Config.swift */,
+				ED000024 /* Config.example.swift */,
 			);
 			path = EdibleDialect;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 				ED000019 /* MapScreen.swift */,
 				ED000020 /* AccountScreen.swift */,
 				ED000021 /* EdibleExperiencesScreen.swift */,
+				ED000022 /* ScoringMethodScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -263,6 +272,9 @@
 				ED001018 /* MapScreen.swift in Sources */,
 				ED001019 /* AccountScreen.swift in Sources */,
 				ED001020 /* EdibleExperiencesScreen.swift in Sources */,
+				ED001021 /* ScoringMethodScreen.swift in Sources */,
+				ED001022 /* Config.swift in Sources */,
+				ED001023 /* Config.example.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

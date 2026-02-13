@@ -7,6 +7,7 @@ struct RestaurantDetailScreen: View {
     @State private var aiBlurb: String?
     @State private var isLoadingBlurb = false
     @State private var blurbError: String?
+    @State private var showScoringMethod = false
 
     var body: some View {
         NavigationStack {
@@ -187,13 +188,6 @@ struct RestaurantDetailScreen: View {
                 Text("•")
                     .foregroundColor(.edibleTextSecondary)
 
-                Text(restaurant.priceRangeEnum.displayString)
-                    .font(.edibleBody)
-                    .foregroundColor(.edibleTextSecondary)
-
-                Text("•")
-                    .foregroundColor(.edibleTextSecondary)
-
                 Text(restaurant.neighborhood)
                     .font(.edibleBody)
                     .foregroundColor(.edibleTextSecondary)
@@ -226,6 +220,23 @@ struct RestaurantDetailScreen: View {
             // Source breakdown
             SourceScoreList(reviews: restaurant.sourceReviews)
                 .padding(.horizontal, Spacing.md)
+
+            Button(action: {
+                showScoringMethod = true
+            }) {
+                HStack(spacing: Spacing.xs) {
+                    Image(systemName: "doc.text.magnifyingglass")
+                        .font(.system(size: 16))
+                    Text("Scoring Method")
+                        .font(.edibleCaption)
+                }
+                .foregroundColor(.edibleGreen)
+            }
+            .buttonStyle(PlainButtonStyle())
+            .padding(.horizontal, Spacing.md)
+            .sheet(isPresented: $showScoringMethod) {
+                ScoringMethodScreen()
+            }
         }
     }
 

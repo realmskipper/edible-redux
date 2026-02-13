@@ -102,6 +102,7 @@ struct RestaurantCard: View {
         }
         .background(Color.edibleCardBackground)
         .cornerRadius(CornerRadius.medium)
+        .contentShape(Rectangle())
         .edibleCardShadow()
     }
 }
