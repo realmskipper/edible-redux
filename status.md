@@ -1,6 +1,6 @@
 # EdibleDialect iOS App - Status
 
-## Last Updated: Feb 9, 2026
+## Last Updated: Feb 13, 2026
 
 ### Overview
 iOS restaurant discovery app for NYC featuring aggregated review scores, custom badges, and restaurant details.
@@ -188,6 +188,25 @@ All info buttons use custom SVG badges (no SF Symbols):
 - `Views/Screens/RestaurantDetailScreen.swift` — Added scoring method sheet, removed price range from header
 - `Views/Components/RestaurantCard.swift` — Added `.contentShape(Rectangle())` for tap target fix
 
+### Feb 13 Session - GitHub Repo Setup & Security
+
+**GitHub Repository Created**
+- Repo: `realmskipper/edible-redux` (public)
+- Installed `gh` CLI via Homebrew, authenticated via browser flow
+- Pushed all commits to GitHub
+
+**API Key Security Hardened**
+- GitHub push protection blocked initial push — detected hardcoded Anthropic API key in git history
+- Used `git filter-branch` to scrub the key from all historical commits
+- API key deleted from Anthropic dashboard as well
+- Confirmed: `AIService.swift` references `Config.anthropicAPIKey`, `Config.swift` is in `.gitignore`, `Config.example.swift` has placeholder
+
+**README Added**
+- Full project README with features, tech stack, project structure, and setup instructions
+
+**All Pending Changes Committed**
+- Committed README, Config.example.swift, ScoringMethodScreen, .gitignore update, project.pbxproj updates, card tap fix, detail screen cleanup, and status.md updates
+
 ---
 
 ## Technical Notes
@@ -241,4 +260,4 @@ Discussed but not implemented:
 - [ ] Add "Ask questions" chat feature for premium users
 - [ ] Photo outreach campaign (see `photo_collection_ideas.md`)
 - [ ] Human-written/pinned reviews system (see `review_ideas.md`)
-- [ ] Secure API key storage (replace hardcoded key)
+- [x] Secure API key storage (Config pattern + .gitignore, history scrubbed)
