@@ -30,7 +30,9 @@
 		ED001020 /* EdibleExperiencesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000021 /* EdibleExperiencesScreen.swift */; };
 		ED001021 /* ScoringMethodScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000022 /* ScoringMethodScreen.swift */; };
 		ED001022 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000023 /* Config.swift */; };
-		ED001023 /* Config.example.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000024 /* Config.example.swift */; };
+		/* Config.example.swift removed from build - template file only */
+		ED001024 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000025 /* SpeechRecognitionService.swift */; };
+		ED001025 /* AudioWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED000026 /* AudioWaveformView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		ED000022 /* ScoringMethodScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoringMethodScreen.swift; sourceTree = "<group>"; };
 		ED000023 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ED000024 /* Config.example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.example.swift; sourceTree = "<group>"; };
+		ED000025 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		ED000026 /* AudioWaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWaveformView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			children = (
 				A950E2152F3588BF00C95C0D /* AIService.swift */,
 				ED000005 /* MockDataService.swift */,
+				ED000025 /* SpeechRecognitionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				ED000010 /* SearchBar.swift */,
 				ED000011 /* SourceScoreRow.swift */,
 				ED000018 /* TabIcon.swift */,
+				ED000026 /* AudioWaveformView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 				ED001020 /* EdibleExperiencesScreen.swift in Sources */,
 				ED001021 /* ScoringMethodScreen.swift in Sources */,
 				ED001022 /* Config.swift in Sources */,
-				ED001023 /* Config.example.swift in Sources */,
+				/* Config.example.swift excluded - template only */
+				ED001024 /* SpeechRecognitionService.swift in Sources */,
+				ED001025 /* AudioWaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +299,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EdibleDialect/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "EdibleDialect needs microphone access so you can describe your dining plans by voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "EdibleDialect uses speech recognition to convert your voice into text for AI-curated dining recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,6 +331,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"EdibleDialect/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "EdibleDialect needs microphone access so you can describe your dining plans by voice.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "EdibleDialect uses speech recognition to convert your voice into text for AI-curated dining recommendations.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

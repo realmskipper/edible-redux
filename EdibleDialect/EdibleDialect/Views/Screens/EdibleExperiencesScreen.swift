@@ -12,6 +12,7 @@ struct EdibleExperiencesScreen: View {
     @State private var inputText = ""
     @State private var isLoading = false
     @FocusState private var isInputFocused: Bool
+    @StateObject private var speechService = SpeechRecognitionService()
 
     private let suggestions = [
         "Plan a date night",
@@ -198,23 +199,76 @@ struct EdibleExperiencesScreen: View {
 
     // MARK: - Input Bar
     private var inputBar: some View {
-        HStack(spacing: Spacing.sm) {
-            TextField("Plan an experience...", text: $inputText)
-                .font(.edibleBody)
-                .foregroundColor(.edibleTextPrimary)
-                .focused($isInputFocused)
-                .onSubmit { sendCurrentMessage() }
-
-            Button(action: { sendCurrentMessage() }) {
-                Image(systemName: "arrow.up.circle.fill")
-                    .font(.system(size: 28))
-                    .foregroundColor(inputText.isEmpty ? .edibleTextSecondary : .edibleGreen)
+        VStack(spacing: 0) {
+            // Error message
+            if let error = speechService.errorMessage {
+                Text(error)
+                    .font(.edibleCaption)
+                    .foregroundColor(.red)
+                    .padding(.horizontal, Spacing.md)
+                    .padding(.top, Spacing.xs)
             }
-            .disabled(inputText.isEmpty || isLoading)
+
+            HStack(spacing: Spacing.sm) {
+                if speechService.isRecording {
+                    // Waveform replaces text field while recording
+                    AudioWaveformView(audioLevel: speechService.audioLevel)
+                        .transition(.opacity.combined(with: .scale(scale: 0.95)))
+                } else {
+                    TextField("Plan an experience...", text: $inputText)
+                        .font(.edibleBody)
+                        .foregroundColor(.edibleTextPrimary)
+                        .focused($isInputFocused)
+                        .onSubmit { sendCurrentMessage() }
+                        .onChange(of: speechService.transcribedText) { _, newValue in
+                            if speechService.isRecording {
+                                inputText = newValue
+                            }
+                        }
+                }
+
+                // Mic button
+                Button(action: { toggleRecording() }) {
+                    Image(systemName: "mic.fill")
+                        .font(.system(size: 22))
+                        .foregroundColor(.white)
+                        .frame(width: 34, height: 34)
+                        .background(speechService.isRecording ? Color(hex: "4169E1") : Color.edibleGreen)
+                        .clipShape(Circle())
+                }
+                .disabled(isLoading)
+
+                // Send button (hidden while recording)
+                if !speechService.isRecording {
+                    Button(action: { sendCurrentMessage() }) {
+                        Image(systemName: "arrow.up.circle.fill")
+                            .font(.system(size: 28))
+                            .foregroundColor(inputText.isEmpty ? .edibleTextSecondary : .edibleGreen)
+                    }
+                    .disabled(inputText.isEmpty || isLoading)
+                }
+            }
+            .padding(.horizontal, Spacing.md)
+            .padding(.vertical, Spacing.sm)
+            .animation(.easeInOut(duration: 0.2), value: speechService.isRecording)
         }
-        .padding(.horizontal, Spacing.md)
-        .padding(.vertical, Spacing.sm)
         .background(Color.edibleCardBackground)
+    }
+
+    // MARK: - Voice Recording
+    private func toggleRecording() {
+        if speechService.isRecording {
+            let finalText = speechService.stopRecording()
+            inputText = ""
+            if !finalText.isEmpty {
+                sendMessage(finalText)
+            }
+        } else {
+            inputText = ""
+            Task {
+                await speechService.startRecording()
+            }
+        }
     }
 
     // MARK: - Actions

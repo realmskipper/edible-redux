@@ -207,6 +207,41 @@ All info buttons use custom SVG badges (no SF Symbols):
 **All Pending Changes Committed**
 - Committed README, Config.example.swift, ScoringMethodScreen, .gitignore update, project.pbxproj updates, card tap fix, detail screen cleanup, and status.md updates
 
+### Feb 13 Session (Part 2) - Voice Input for Edible Experiences
+
+**Speech Recognition / Mic Input Added**
+- New `Services/SpeechRecognitionService.swift` — uses Apple's `Speech` framework + `AVAudioEngine`
+- Real-time speech-to-text via `SFSpeechRecognizer` (prefers on-device recognition on iOS 17+)
+- Handles permission requests for both microphone and speech recognition
+- `startRecording()` / `stopRecording()` with clean audio session management
+
+**Edible Experiences Screen Updated**
+- Added mic button to input bar (between text field and send button)
+- Idle state: green circle with mic icon
+- Recording state: red circle with pulsing animation + "Listening..." indicator with animated red dot
+- Live transcription appears in the text field as the user speaks
+- Tap mic to start → tap again to stop → transcribed text auto-sends to AI concierge
+- Mic disabled while AI is loading
+
+**Info.plist Permissions Added** (via build settings)
+- `NSMicrophoneUsageDescription` — "EdibleDialect needs microphone access so you can describe your dining plans by voice."
+- `NSSpeechRecognitionUsageDescription` — "EdibleDialect uses speech recognition to convert your voice into text for AI-curated dining recommendations."
+
+**Build Fix: Config.example.swift**
+- Removed `Config.example.swift` from compile sources — was causing "Invalid redeclaration of 'Config'" since both `Config.swift` and `Config.example.swift` defined `struct Config`
+- File remains in project as a reference template, just no longer compiled
+
+**New Files**
+- `Services/SpeechRecognitionService.swift` (ED000025 / ED001024)
+
+**Modified Files**
+- `Views/Screens/EdibleExperiencesScreen.swift` — mic button, recording state, live transcription
+- `project.pbxproj` — new file registration, Info.plist permission keys, Config.example build fix
+
+**Still TODO**
+- Add new Anthropic API key to `Config.swift` for testing
+- Design tweaks to mic button / recording UI
+
 ---
 
 ## Technical Notes
@@ -245,6 +280,7 @@ Discussed but not implemented:
 - `Views/Screens/RestaurantDetailScreen.swift` - Detail view with square hero image, AI blurb section
 - `Services/MockDataService.swift` - Mock restaurant data with coordinates
 - `Services/AIService.swift` - Anthropic Claude API integration for AI blurbs
+- `Services/SpeechRecognitionService.swift` - Speech-to-text for voice input
 - `Resources/Assets.xcassets/` - All images and badges
 
 ---
@@ -261,3 +297,5 @@ Discussed but not implemented:
 - [ ] Photo outreach campaign (see `photo_collection_ideas.md`)
 - [ ] Human-written/pinned reviews system (see `review_ideas.md`)
 - [x] Secure API key storage (Config pattern + .gitignore, history scrubbed)
+- [x] Voice input for Edible Experiences (speech-to-text mic button)
+- [ ] Voice input design tweaks (mic button styling, recording UI polish)
